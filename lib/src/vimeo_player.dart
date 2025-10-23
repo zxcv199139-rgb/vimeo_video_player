@@ -9,6 +9,7 @@ class VimeoVideoPlayer extends StatelessWidget {
   ///
   /// [videoId] is required and cannot be empty
   final String videoId;
+  final String? videoHash;
 
   /// Used to auto-play the video once initialized
   ///
@@ -91,6 +92,7 @@ class VimeoVideoPlayer extends StatelessWidget {
   VimeoVideoPlayer({
     super.key,
     required this.videoId,
+    required this.videHash,
     this.isAutoPlay = false,
     this.isLooping = false,
     this.isMuted = false,
@@ -193,6 +195,7 @@ class VimeoVideoPlayer extends StatelessWidget {
   String _buildIframeUrl() {
     return 'https://player.vimeo.com/video/$videoId?'
         'autoplay=$isAutoPlay'
+        '$videoHash == null ? "" : $videoHash'
         '&loop=$isLooping'
         '&muted=$isMuted'
         '&title=$showTitle'
