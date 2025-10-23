@@ -195,7 +195,7 @@ class VimeoVideoPlayer extends StatelessWidget {
   String _buildIframeUrl() {
     return 'https://player.vimeo.com/video/$videoId?'
         'autoplay=$isAutoPlay'
-        '${videoHash == null ? "" : "$videoHash"}'
+        '${videoHash == null ? "" : "&hash=$videoHash"}'
         '&loop=$isLooping'
         '&muted=$isMuted'
         '&title=$showTitle'
