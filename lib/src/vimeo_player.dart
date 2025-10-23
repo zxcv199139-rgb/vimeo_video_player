@@ -92,7 +92,7 @@ class VimeoVideoPlayer extends StatelessWidget {
   VimeoVideoPlayer({
     super.key,
     required this.videoId,
-    required this.videHash,
+    required this.videoHash,
     this.isAutoPlay = false,
     this.isLooping = false,
     this.isMuted = false,
